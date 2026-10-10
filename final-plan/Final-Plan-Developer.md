@@ -126,7 +126,15 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Pose prompt.** Shown on the live camera view in the dark translucent pill (where the coach banner sits in the mock), for example "Pose 1: Lie flat on your back. Take a selfie from the ground." When the shutter is pressed the pill fades and the pose text becomes the default caption above the white line. The user can edit it (60 characters). The same prompt is in the daily notification.
 
-**5-second timer (hands-free).** Many poses need both hands or the phone held at a distance, so the camera has a small timer button at the top-right, opposite the X (see the third mock). Off by default, labelled "5s timer". Tapping it turns it on (white button with a pink stopwatch, label "5s on"). With it on, pressing the shutter starts a 5, 4, 3, 2, 1 countdown shown large over the camera with a pill "Hands-free: photo in 5 seconds", a light tick or haptic each second, and the photo is taken automatically at zero. Pressing the shutter again or the timer button during the countdown cancels it. After the photo the flow is identical to a normal selfie (caption, send, lock). The timer choice is remembered on the device. Optional: when a pose needs distance or both hands, show "Needs both hands? Turn on the 5s timer" under the pose prompt. This is separate from the 3-second "Reveal 3, 2, 1" countdown, which only plays before the reveal.
+**5-second timer (hands-free). An optional tap, never automatic.** Many poses need both hands or the phone held at a distance, so the camera has a small timer button at the top-right, opposite the X. The user chooses, every time, whether to use it. It is OFF by default and normal photos are unchanged: tap the shutter, photo is taken instantly.
+
+How it works, matching the three camera mocks in order:
+
+1. **Timer off (default).** The button is grey with a stopwatch icon and the label "Timer: off". The shutter takes the photo immediately.
+2. **User taps the timer button to turn it on.** The button turns white with a pink stopwatch and the label changes to "Timer: 5s". A pill appears: "Timer on. Tap the shutter to start 5s". Nothing starts yet. Tapping the button again turns it back off.
+3. **User taps the shutter.** A large 5, 4, 3, 2, 1 counts down over the camera, with a light tick or haptic each second and the pill "Photo in 3... tap to cancel". The shutter shows a white stop square. Tapping the shutter or the timer button cancels and returns to step 2. At zero the photo is taken automatically.
+
+After the photo the timer switches itself back off, so the next photo is a normal tap unless the user chooses the timer again. The rest of the flow is identical to a normal selfie (caption, send, lock). Optional: when a pose needs distance or both hands, show "Needs both hands? Try the 5s timer" under the pose prompt, which only points at the button and never turns it on. This is separate from the 3-second "Reveal 3, 2, 1" countdown, which only plays before the reveal.
 
 **Camera permission denied.** Explain why and link to Settings. A gallery fallback is allowed only in this case, with a warning.
 
@@ -138,9 +146,9 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
-**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is dropped, and the reveal countdown screen is not drawn yet. The camera mock now includes the 5-second timer button (third screen).
+**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is dropped, and the reveal countdown screen is not drawn yet. The camera now has an optional 5-second timer button (screens 2 to 4 show off, turned on, and counting down).
 
-![First selfie, camera, camera with 5-second timer on, reveal and share card mocks](images/sync-reference-screens.png)
+![First selfie, camera, camera with timer off, timer turned on, 5-second countdown, reveal and share card mocks](images/sync-reference-screens.png)
 
 ## 6. Storage, relay and privacy
 
@@ -239,6 +247,6 @@ R2 is preferred because it charges nothing for downloads.
 - On-device card and video generation. Front camera not mirrored. Test on several Android phones.
 - Locked placeholders and the three-plan pricing page.
 - Store forms, privacy policy, in-app account deletion, unlink partner.
-- 5-second hands-free timer on the camera (top-right button, countdown, auto-capture, cancel). Test with the front and back camera and with flash.
+- Optional 5-second hands-free timer on the camera: top-right button, off by default, tap to arm, tap shutter to count down, auto-capture, cancel, resets to off after each photo. Test with the front and back camera and with flash.
 - Load the pose list from Final-Plan-Pose-List.xlsx (Pose 1 to 365, no dates).
 - Test with two accounts on two phones, one set to another timezone, covering: both send, one sends, partner never joins, late code entry, app closed mid-countdown, upload failure, 14-day lock.
