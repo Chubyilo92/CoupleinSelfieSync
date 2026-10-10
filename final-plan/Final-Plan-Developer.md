@@ -128,7 +128,7 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **5-second timer (hands-free). An optional tap, never automatic.** Many poses need both hands or the phone held at a distance, so the camera has a small timer button at the top-right, opposite the X. The user chooses, every time, whether to use it. It is OFF by default and normal photos are unchanged: tap the shutter, photo is taken instantly.
 
-How it works, matching the three camera mocks in order:
+How it works, shown in the camera mocks (screen 2 is step 1, screen 3 shows steps 2 and 3 as a single mock; the intermediate screens are not drawn):
 
 1. **Timer off (default).** The button is grey with a stopwatch icon and the label "Timer: off". The shutter takes the photo immediately.
 2. **User taps the timer button to turn it on.** The button turns white with a pink stopwatch and the label changes to "Timer: 5s". A pill appears: "Timer on. Tap the shutter to start 5s". Nothing starts yet. Tapping the button again turns it back off.
@@ -146,9 +146,9 @@ After the photo the timer switches itself back off, so the next photo is a norma
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
-**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is dropped, and the reveal countdown screen is not drawn yet. The camera now has an optional 5-second timer button (screens 2 to 4 show off, turned on, and counting down).
+**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is dropped, and the reveal countdown screen is not drawn yet. The camera now has an optional 5-second timer button (screen 2 shows it off, screen 3 shows it on and counting down).
 
-![First selfie, camera, camera with timer off, timer turned on, 5-second countdown, reveal and share card mocks](images/sync-reference-screens.png)
+![First selfie, camera, camera, camera with 5-second timer on, reveal and share card mocks](images/sync-reference-screens.png)
 
 ## 6. Storage, relay and privacy
 
