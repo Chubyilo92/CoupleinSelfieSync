@@ -27,7 +27,7 @@ Terms: **Relationship Day Count** is days since the start date entered by the fi
 
 ## 2. Navigation, Free vs Pro, pricing and placeholders
 
-Sync replaces Mood Sync as the centre of the app and is the only free feature. The app opens on the camera, or on today's card if today's selfie is already sent.
+Sync replaces Mood Sync as the centre of the app and is the only free feature, with no limit on daily use (the habit is the product). The only thing gated is viewing old photos: Free can open the last 14 days; anything older is Pro. The app opens on the camera, or on today's card if today's selfie is already sent.
 
 **Tab bar:** Calendar, Brownies, Missions, Resolve, Settings. Only Missions is free. **Assumption:** Missions holds Sync (today's pose, camera, reveal). Confirm before building.
 
@@ -78,7 +78,7 @@ One thing a day, every day. Each couple walks a fixed list of 365 poses in order
 6. Every photo sent earns 25 points, whether or not the partner has sent.
 7. There is no second daily card and no weekly special task in the MVP.
 
-**Pose list.** The existing 365-day sheet must be rebuilt as Pose 1 to 365 with no Month column. Pose 1 is "Lie flat on your back. Take a selfie from the ground." The first 14 poses are the ones every free user sees, and the first 7 feed the Week 1 video. In-app poses must be safe to do at home: no roads, roofs, edges or water.
+**Pose list.** The existing 365-day sheet must be rebuilt as Pose 1 to 365 with no Month column. Pose 1 is "Lie flat on your back. Take a selfie from the ground." Every pose is free to do, every day, for as long as the couple wants: nothing about doing the daily pose is ever locked. Only viewing old photos is Pro (section 6). The first 7 poses feed the Week 1 video. In-app poses must be safe to do at home: no roads, roofs, edges or water.
 
 ## 4. Onboarding
 

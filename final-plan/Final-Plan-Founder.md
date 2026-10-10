@@ -38,7 +38,7 @@ Two growth loops: your absurd videos bring in the first couples, then every shar
 3. **Seed 5 to 10 couple creators from one niche** with overlapping audiences, all posting the same pose within a few hours with the same hashtag and format, so one audience sees it several times. Twenty creators with separate audiences would not look busy.
 4. **A landing page per shared card.** Anyone tapping a shared card lands on "Do this pose with someone" with a one-tap store link, not the generic home page.
 5. **Write each pose notification as a dare**, for example "Pose 4: kiss while pretending to be asleep."
-6. **Make the first 7 poses the funniest and most filmable.** They feed the Week 1 video and most free users will not pass 14.
+6. **Make the first 7 poses the funniest and most filmable.** They feed the Week 1 video and set the tone for the habit.
 7. **Put the paywall where people are attached:** the Week 1 video ("Remove the watermark"), plus the locked tabs and the day 10 to 13 photo-lock warning.
 8. **Invite as a curiosity gap.** The invite carries the blurred locked card and the compliment, and says they took a selfie just for the partner.
 
@@ -66,7 +66,7 @@ Two growth loops: your absurd videos bring in the first couples, then every shar
 
 ## 4. Risks
 
-- **14-day lock frustration:** older photos are stored on the phone but locked on Free. Some users may feel punished. The Week 1 video is the soft paywall to test this.
+- **Locked old photos:** doing the pose is unlimited and free, and only viewing photos older than 14 days is Pro. Some users may still feel punished when a loved photo locks. The Week 1 video is the soft paywall to test this.
 - **Camera effort drop-off:** one pose a day only works if sending feels easy. Watch day 2 to day 7 retention.
 - **Privacy promise:** the relay means photos briefly leave the phone. The copy must say this honestly (encrypted, deleted after both download).
 - **Unverified claim:** "8 of 10 couples resolve in 5 minutes" is not backed by data yet. Verify before it goes live.
@@ -86,6 +86,6 @@ Two growth loops: your absurd videos bring in the first couples, then every shar
 
 - Verify the 8 of 10 claim and the invented Resolve timings (1:30 / 1:00 / 1:00 / 1:30).
 - Rebuild the 365-pose sheet with no dates, Pose 1 = lie flat on back.
-- Approve the first 14 poses.
+- Approve the first 7 poses.
 - Still to design: countdown screen, invite fork, pricing page, Week 1 video promise and ready screens.
 - Hand the Developer Spec to your developer.
