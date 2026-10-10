@@ -1,16 +1,16 @@
-# Final Plan: Founder Plan (Sync)
+# Final Plan: Founder Plan (Mission)
 
 Oct 10, 2026
 
 ## 1. Decisions and what was cut
 
-Sync is the hero feature and the growth engine: one pose a day, both partners send, a 3-2-1 reveal, and a card worth sharing. The developer has a separate spec (Final Plan: Developer Spec). This page is yours: marketing, money, risks and what only you can decide.
+Mission is the hero feature and the growth engine: one pose a day, both partners send, a 3-2-1 reveal, and a card worth sharing. The developer has a separate spec (Final Plan: Developer Spec). This page is yours: marketing, money, risks and what only you can decide.
 
 **Locked**
 
 - One thing a day, every day. A new pose unlocks at 3AM once both have sent the current one.
 - Pricing: weekly £5.99, monthly £9.99, yearly £49.99.
-- Only Sync is free. Calendar, Brownies and Resolve are Pro, shown as locked placeholders with promise lines ("We are a priority.", "Speak their language!", "8 of 10 couples resolve in 5 minutes.").
+- Only Mission is free. Calendar, Brownies and Resolve are Pro, shown as locked placeholders with promise lines ("We are a priority.", "Speak their language!", "8 of 10 couples resolve in 5 minutes.").
 - Photos stay on the phone. Free users can open the last 14 days. A short-lived relay delivers photos between phones and deletes them.
 - First selfie is a hard gate: nobody sees any other screen until it is sent.
 - Week 1 video after the 7th completed pair, promised on the first reveal.
@@ -76,7 +76,7 @@ Two growth loops: your absurd videos bring in the first couples, then every shar
 
 **Open questions (decide with the developer):**
 
-- Does the Missions tab hold Sync? (assumed yes, it is the only free tab)
+- Does the Mission live in the Missions tab? (assumed yes, it is the only free tab)
 - Is Pro per person or per couple?
 - Hard gate: first selfie only, or every day?
 - What do points buy, and is there a daily cap? (25 points per photo for now)

@@ -1,10 +1,10 @@
-# Final Plan: Developer Spec (Sync MVP)
+# Final Plan: Developer Spec (Mission MVP)
 
 Oct 10, 2026
 
 ## 1. Scope
 
-Sync is the MVP: one pose a day, both partners send a selfie, a 3-2-1 reveal shows both, and the card can be saved or posted. Everything else in the app is Pro and shown as a locked placeholder.
+Mission is the MVP: one pose a day, both partners send a selfie, a 3-2-1 reveal shows both, and the card can be saved or posted. Everything else in the app is Pro and shown as a locked placeholder.
 
 **In the MVP**
 
@@ -27,13 +27,13 @@ Terms: **Relationship Day Count** is days since the start date entered by the fi
 
 ## 2. Navigation, Free vs Pro, pricing and placeholders
 
-Sync replaces Mood Sync as the centre of the app and is the only free feature, with no limit on daily use (the habit is the product). The only thing gated is viewing old photos: Free can open the last 14 days; anything older is Pro. The app opens on the camera, or on today's card if today's selfie is already sent.
+Mission replaces Mood Sync as the centre of the app and is the only free feature, with no limit on daily use (the habit is the product). The only thing gated is viewing old photos: Free can open the last 14 days; anything older is Pro. The app opens on the camera, or on today's card if today's selfie is already sent.
 
-**Tab bar:** Calendar, Brownies, Missions, Resolve, Settings. Only Missions is free. **Assumption:** Missions holds Sync (today's pose, camera, reveal). Confirm before building.
+**Tab bar:** Calendar, Brownies, Missions, Resolve, Settings. Only Missions is free. **Assumption:** the Mission (today's pose, camera, reveal) lives in the Missions tab. Confirm before building.
 
 | Area | Free | Pro |
 | --- | --- | --- |
-| Sync: daily pose, send, reveal, share card | Yes | Yes |
+| Mission: daily pose, send, reveal, share card | Yes | Yes |
 | Past cards | Last 14 days | All, from the phone's storage |
 | Calendar, Brownies, Resolve | Locked placeholder | Yes |
 | Watermark on cards and Week 1 video | Yes | Removed |
@@ -148,7 +148,7 @@ After the photo the timer switches itself back off, so the next photo is a norma
 
 **Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is dropped, and the reveal countdown screen is not drawn yet. The camera now has an optional 5-second timer button (screen 2 shows it off, screen 3 shows it on and counting down).
 
-![First selfie, camera, camera, camera with 5-second timer on, reveal and share card mocks](images/sync-reference-screens.png)
+![First selfie, camera, camera with 5-second timer on, reveal and share card mocks](images/mission-reference-screens.png)
 
 ## 6. Storage, relay and privacy
 
@@ -232,7 +232,7 @@ R2 is preferred because it charges nothing for downloads.
 
 **To confirm with the founder before building**
 
-1. Does the Missions tab hold Sync (today's pose, camera, reveal)? Assumed yes.
+1. Does the Mission (today's pose, camera, reveal) live in the Missions tab? Assumed yes.
 2. Is Pro per person or per couple? Recommended per couple.
 3. Does the hard gate (no other screen until you have sent) apply to every daily pose, or only the first selfie? Built as first selfie only.
 4. What do points buy, and is there a daily cap? Points are earned (25 a photo) but the spend is undefined.
