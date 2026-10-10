@@ -78,7 +78,7 @@ One thing a day, every day. Each couple walks a fixed list of 365 poses in order
 6. Every photo sent earns 25 points, whether or not the partner has sent.
 7. There is no second daily card and no weekly special task in the MVP.
 
-**Pose list.** The existing 365-day sheet must be rebuilt as Pose 1 to 365 with no Month column. Pose 1 is "Lie flat on your back. Take a selfie from the ground." Every pose is free to do, every day, for as long as the couple wants: nothing about doing the daily pose is ever locked. Only viewing old photos is Pro (section 6). The first 7 poses feed the Week 1 video. In-app poses must be safe to do at home: no roads, roofs, edges or water.
+**Pose list.** The rebuilt list is Final-Plan-Pose-List.xlsx (Pose 1 to 365, no Month column). Pose 1 is "Lie flat on your back. Take a selfie from the ground." Every pose is free to do, every day, for as long as the couple wants: nothing about doing the daily pose is ever locked. Only viewing old photos is Pro (section 6). The first 7 poses feed the Week 1 video. In-app poses must be safe to do at home: no roads, roofs, edges or water.
 
 ## 4. Onboarding
 
@@ -126,6 +126,8 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Pose prompt.** Shown on the live camera view in the dark translucent pill (where the coach banner sits in the mock), for example "Pose 1: Lie flat on your back. Take a selfie from the ground." When the shutter is pressed the pill fades and the pose text becomes the default caption above the white line. The user can edit it (60 characters). The same prompt is in the daily notification.
 
+**5-second timer (hands-free).** Many poses need both hands or the phone held at a distance, so the camera has a small timer button at the top-right, opposite the X (see the third mock). Off by default, labelled "5s timer". Tapping it turns it on (white button with a pink stopwatch, label "5s on"). With it on, pressing the shutter starts a 5, 4, 3, 2, 1 countdown shown large over the camera with a pill "Hands-free: photo in 5 seconds", a light tick or haptic each second, and the photo is taken automatically at zero. Pressing the shutter again or the timer button during the countdown cancels it. After the photo the flow is identical to a normal selfie (caption, send, lock). The timer choice is remembered on the device. Optional: when a pose needs distance or both hands, show "Needs both hands? Turn on the 5s timer" under the pose prompt. This is separate from the 3-second "Reveal 3, 2, 1" countdown, which only plays before the reveal.
+
 **Camera permission denied.** Explain why and link to Settings. A gallery fallback is allowed only in this case, with a warning.
 
 **Countdown before every reveal.** Full-screen, dark or blurred background, both photos hidden behind a combined card. The word "Reveal" then "3... 2... 1...", one second per number (3 seconds total). No skip. It runs from local state with no network dependency. The combined card is rendered and cached before the countdown starts so the reveal has no spinner. If the app is closed mid-countdown, reopening lands on the reveal. If the user taps the push hours later, the countdown still plays. The countdown never shows the phrase "Who did it better?".
@@ -136,9 +138,9 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
-**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is dropped, and the countdown screen is not drawn yet.
+**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is dropped, and the reveal countdown screen is not drawn yet. The camera mock now includes the 5-second timer button (third screen).
 
-![First selfie, camera, reveal and share card mocks](images/sync-reference-screens.png)
+![First selfie, camera, camera with 5-second timer on, reveal and share card mocks](images/sync-reference-screens.png)
 
 ## 6. Storage, relay and privacy
 
@@ -237,5 +239,6 @@ R2 is preferred because it charges nothing for downloads.
 - On-device card and video generation. Front camera not mirrored. Test on several Android phones.
 - Locked placeholders and the three-plan pricing page.
 - Store forms, privacy policy, in-app account deletion, unlink partner.
-- Rebuild the pose list as Pose 1 to 365 with no dates.
+- 5-second hands-free timer on the camera (top-right button, countdown, auto-capture, cancel). Test with the front and back camera and with flash.
+- Load the pose list from Final-Plan-Pose-List.xlsx (Pose 1 to 365, no dates).
 - Test with two accounts on two phones, one set to another timezone, covering: both send, one sends, partner never joins, late code entry, app closed mid-countdown, upload failure, 14-day lock.
