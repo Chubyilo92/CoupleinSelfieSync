@@ -76,7 +76,7 @@ Two growth loops: your absurd videos bring in the first couples, then every shar
 
 **Open questions (decide with the developer):**
 
-- Does the Mission live in the Missions tab? (assumed yes, it is the only free tab)
+- Tab bar is now Calendar (Pro), Bond (free), Mission (free, centre), Brownies (Pro), Resolve (Pro); Settings moves to a top-right gear. Two free features: Mission and Bond.
 - Is Pro per person or per couple?
 - Hard gate: first selfie only, or every day?
 - What do points buy, and is there a daily cap? (25 points per photo for now)

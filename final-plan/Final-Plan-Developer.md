@@ -27,14 +27,15 @@ Terms: **Relationship Day Count** is days since the start date entered by the fi
 
 ## 2. Navigation, Free vs Pro, pricing and placeholders
 
-Mission replaces Mood Sync as the centre of the app and is the only free feature, with no limit on daily use (the habit is the product). The only thing gated is viewing old photos: Free can open the last 14 days; anything older is Pro. The app opens on the camera, or on today's card if today's selfie is already sent.
+Mission replaces Mood Sync as the centre of the app and is a free feature (with Bond, below), with no limit on daily use (the habit is the product). The only thing gated is viewing old photos: Free can open the last 14 days; anything older is Pro. The app opens on the camera, or on today's card if today's selfie is already sent.
 
-**Tab bar:** Calendar, Brownies, Missions, Resolve, Settings. Only Missions is free. **Assumption:** the Mission (today's pose, camera, reveal) lives in the Missions tab. Confirm before building.
+**Tab bar (left to right):** Calendar (Pro), Bond (free), Mission (free, centre, raised camera button), Brownies (Pro), Resolve (Pro). Settings moves out of the tab bar to a gear icon at the top right of every screen. Pro tabs keep the pink lock badge. The Mission (today's pose, camera, reveal) lives in the centre Mission button. **Bond** is a free page: a daily question, an "Ask another" tab with category chips (Fun, Go deeper, Would you rather, Our future, Memories), and a reveal where both partners' typed answers (200 characters) show together once both have answered. No chat, no history in v1. Question bank spec: see the "CoupleIn Bond: Question Bank" doc.
 
 | Area | Free | Pro |
 | --- | --- | --- |
 | Mission: daily pose, send, reveal, share card | Yes | Yes |
 | Past cards | Last 14 days | All, from the phone's storage |
+| Bond: daily question, Ask another, reveal | Yes | Yes |
 | Calendar, Brownies, Resolve | Locked placeholder | Yes |
 | Watermark on cards and Week 1 video | Yes | Removed |
 
