@@ -23,6 +23,22 @@ Design: the "CoupleIn Free Page Options" canvas, boards 1 to 4.
 | 3. Reveal | Partner's answer and yours with reaction chips Love, Same, Haha. A "Both answered" label. An "Ask another" card at the bottom. | Tap a reaction |
 | 4. Ask another | Chips: Fun, Go deeper, Would you rather, Our future, Memories. A card with one question from the chosen chip and a refresh icon. Below it, "Sent to [Partner] today" with each question's state (Waiting, Both answered). | "Answer and ask [Partner]" |
 
+**Screen 1: Today**
+
+![Bond, screen 1: Today](images/bond/bond-1-today.png)
+
+**Screen 2: Answer sheet**
+
+![Bond, screen 2: Answer sheet](images/bond/bond-2-answer-sheet.png)
+
+**Screen 3: Reveal**
+
+![Bond, screen 3: Reveal](images/bond/bond-3-reveal.png)
+
+**Screen 4: Ask another**
+
+![Bond, screen 4: Ask another](images/bond/bond-4-ask-another.png)
+
 - **Today.** One daily question, the same for both partners, day-agnostic (no weekly schedule). Changes at 3AM in the couple's shared timezone, the same reset as the Mission pose (to confirm).
 - **Answer sheet.** Text only, 200 characters, no empty answers. Final once sent. Placeholder: "Write it how you'd say it to [Partner]".
 - **Ask another.** Pick a chip, see a question, tap refresh for the next unseen one in that chip, send it by answering it. The partner gets it in their "[Partner] asked you" row. Cap: 3 open sent questions per couple at a time (to confirm).
