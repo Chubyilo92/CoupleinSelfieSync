@@ -181,12 +181,17 @@ After the photo the timer switches itself back off, so the next photo is a norma
 - **Mission badge (free).** A white rounded badge centred on the white line: "♥ CoupleIn · Day N · MISSION" on the first row, the mission in bold below ("Take a picture lying down on your back"). The centre of the frame is never covered by any app, and the mission is the hook that makes viewers want to try it. Because it sits across the line it only touches the chin of the top photo and the hair of the bottom one, never the faces. Use on-device face detection: if the badge would cover a face, shrink it to one line.
 - **Watermark (free).** "♥ coupleinapp.com" in small white text just under the badge.
 - **Caption + mood.** One pill per photo, left-aligned: top photo about 15% from the top, bottom photo just above the bottom safe line. Only shown if added.
-- **Clean (Pro).** Mission badge and watermark removed (either or both); the plain "CoupleIn · Day N" pill stays on the line.
+- **Clean (Pro).** Mission and watermark are two separate Pro switches: either one or both can be removed; the plain "CoupleIn · Day N" pill stays on the line.
 - The camera's own overlays (X, flip, timer, the mission text at the top of the camera) are never part of the photo or the card. The badge is drawn fresh when the card is exported.
 
 ![Share card, free vs Pro, with the TikTok / Reels / Stories covered areas in pink](images/share-card-safe-zones.png)
 
-**Save sheet.** Tapping Save opens "Save your card" with two previews: **Keep as it is** (mission + watermark, free, selected by default) and **Clean** (no mission, no watermark, PRO badge). Below them two switches, "Show mission" and "Show watermark": Pro users can turn either or both off; free users see them on and locked with a PRO tag, and tapping Clean or a locked switch opens the paywall. Button: "Save to Photos". The same choice appears before sharing from Who did it better?. Shown with the paywall in section 2.
+**Save sheet.** Tapping Save opens "Save your card" with a live preview of the card and two switches underneath:
+
+- **Mission** (show today's mission on the card), on by default.
+- **Watermark** (show coupleinapp.com), on by default.
+
+The two switches are **independent of each other**: Pro users can turn off the mission only, the watermark only, or both, and the preview updates instantly. **Both switches are Pro.** Free users see both on, each with a PRO tag; tapping either one opens the paywall, and the card is saved with the mission and the watermark. Small line under the switches: "Turn either one off with Pro. They work separately." Button: "Save to Photos". The same sheet appears before sharing from Who did it better?. The app remembers each Pro user's last choice for next time.
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
