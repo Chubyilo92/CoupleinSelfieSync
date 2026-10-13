@@ -122,7 +122,7 @@ The promise made before any photo is taken: neither partner can see the other's 
 10. **Share screen.** Message: "Hi [Partner Name], [Your Name] loves that you are so [compliment]. They made a selfie just for you. Send yours to unlock it." The blurred locked card is attached as an image. Buttons: Share to WhatsApp / Copy link / Remind me later.
 11. **Waiting screen.** Own locked card, "Waiting for [Partner Name] to join." Send reminder. Further selfies stack as locked and unlock when the partner joins. Warning: "Your selfies live on this phone. Don't delete the app until [Partner Name] joins."
 12. **Push when the partner sends:** "[Partner Name] just sent theirs. Tap to reveal."
-13. **Countdown:** "Reveal" then "3... 2... 1..." (section 5), then the reveal. Buttons: Save card / Who did it better?
+13. **Countdown:** Tap to reveal, then "Reveal" "3... 2... 1..." (section 5), then the reveal. Buttons: Save card / Who did it better?
 14. **Week 1 video promise.** "Send 7 poses and we'll make you a video of your first week."
 
 **Flow B: User 2 (partner, arrives by invite)**
@@ -175,17 +175,19 @@ After the photo the timer switches itself back off, so the next photo is a norma
 
 **Camera permission denied.** Explain why and link to Settings. A gallery fallback is allowed only in this case, with a warning.
 
-**Reveal countdown (animated).** Plays as soon as both partners have sent (or when the "[Partner] just sent theirs" push is tapped). Full screen: no tab bar, no header text, no action buttons, only the X. Both photos sit in place but heavily blurred (about 34px), with the white line between them. Centred over the line: "REVEAL" in spaced capitals, a frosted-glass circle with the number, and "You both sent yours" underneath.
+**Tap to reveal (the user starts it).** The reveal never plays on its own. As soon as both partners have sent, each partner lands on a "ready" screen (from the camera, from the "[Partner] just sent theirs" push, or when they next open the app): both photos in place but heavily blurred (about 34px), the white line and Day pill between them, both profile photos with green ticks, "You both sent yours" and "Ready when you are.", and one big pink button, **♥ Tap to reveal**, sitting just under the line with a soft pulsing ring around it. Only the X is shown otherwise. Each partner taps their own button; one partner revealing does not reveal for the other. If the user leaves without tapping, they come back to this same screen.
+
+**Reveal countdown (animated).** Starts the moment the user taps the button (the button presses in to 95%). Full screen: no tab bar, no header text, no action buttons, only the X. Centred over the line: "REVEAL" in spaced capitals, a frosted-glass circle with the number, and "You both sent yours" underneath.
 
 1. **3, 2, 1.** One second per number. Each number pops in at 125% and settles to 100% in about 250ms, with a light haptic on each.
 2. **Reveal.** After 1 the circle fades, both photos unblur over about 0.8s, and a burst of small pink hearts flies out from the Day pill on the line.
 3. **Revealed.** The caption and mood pills, the header "Mission complete / You're both in. Next pose at 3AM." and the white action strip (Our cards, Save, Who did it better?) slide in.
 
-No skip. It runs from local state with no network dependency: both photos are already on the phone and the combined card is cached before the countdown starts, so there is no spinner. If the app is closed mid-countdown, reopening lands on the revealed screen. If the user taps the push hours later, the countdown still plays. "Who did it better?" never appears during the countdown.
+No skip. It runs from local state with no network dependency: both photos are already on the phone and the combined card is cached before the countdown starts, so there is no spinner. If the app is closed mid-countdown, reopening lands on the revealed screen. If the user opens the app or taps the push hours later, they land on the Tap to reveal screen and the countdown plays when they tap. "Who did it better?" never appears during the countdown.
 
-![Reveal countdown: 3, 2, 1, unblur with hearts, revealed](images/reveal-countdown.png)
+![Reveal: Tap to reveal, 3, 2, 1, unblur with hearts, revealed](images/reveal-countdown.png)
 
-![Reveal animation (loop)](images/reveal-animation.gif)
+![Reveal animation (loop): tap, countdown, unblur, revealed](images/reveal-animation.gif)
 
 **Reveal screen.** Both photos clean, each with its caption + mood pill ("😊 Happy · Finally home. Pizza night?"), the Day pill on the line, the header "Mission complete / You're both in. Next pose at 3AM.", and the white action strip under the photos (it never covers them): Our cards, **Save** (opens the Save sheet) and **Who did it better?** (opens the Save sheet, then the share sheet).
 
@@ -255,7 +257,7 @@ R2 is preferred because it charges nothing for downloads.
 | When | Message |
 | --- | --- |
 | New pose unlocks (3AM shared timezone, delivered at the couple's chosen time) | Contains today's pose, so the task is visible before opening the app |
-| Partner has sent | "[Partner Name] just sent theirs. Tap to reveal." Opens the countdown |
+| Partner has sent | "[Partner Name] just sent theirs. Tap to reveal." Opens the Tap to reveal screen |
 | Partner has not joined after 7 days | Reminder to the inviter |
 | Photos about to lock (days 10 to 13) | "Save your cards before they lock" |
 | 7th pair revealed | "Your Week 1 video is ready" |
@@ -411,6 +413,6 @@ The daily question can come from any category; "Ask another" serves from the cho
 - Share card export with the social safe zone, the Day pill and the watermark; Save sheet with the single Watermark switch (Pro).
 - Pro paywall with the 2-for-1 banner and the six-line value stack.
 - Bond (section 8): Today, Answer sheet, Reveal, Ask another, question bank, notifications.
-- Animated reveal: blurred photos, "REVEAL" 3-2-1 with pop and haptics, unblur with heart burst, then the revealed screen.
+- Tap to reveal screen (user must tap), then the animated reveal: blurred photos, "REVEAL" 3-2-1 with pop and haptics, unblur with heart burst, then the revealed screen.
 - Two daily Mission nudges (9 AM and 6 PM local, editable), stopped as soon as the user sends.
 - Watermark = the centre pill: "CoupleIn · Day N" (free) or "N Days of Us" (Pro, watermark off).
