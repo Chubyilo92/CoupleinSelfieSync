@@ -125,6 +125,16 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Camera screen.** Full screen, tab bar hidden, X at top-left (only after the first selfie is sent), front camera, saved photo not mirrored. Layout follows the "First selfie" mock below: the photo fills the top half, the white line carries a "Day N together" pill, the partner's panel (locked, or invite) sits below.
 
+**Mission screen: three states.** The centre Mission tab opens straight into this full-screen camera. No tab bar, no header bar: the camera runs edge to edge. Your live camera fills the top half, the partner's half fills the bottom, the white line between them carries the "CoupleIn · Day N" pill. Top-left X (back to the app), top-right 5s timer, the pose ("Pose 37" + text) written across the top. Bottom row in every camera state: "Our cards" thumbnail of the last card (bottom-left, opens the gallery), shutter (centre), flip camera (right).
+
+1. **Partner has not sent.** Partner half is a soft pink-to-peach gradient (never black) with the partner's profile photo in a gradient ring, "Emma hasn't sent hers yet", "Go first. She can't see yours until she sends hers." and a white "Nudge Emma" button (sends a push; limit one nudge per 3 hours).
+2. **Partner has sent.** Partner half shows her photo heavily blurred with a frosted lock: "Emma sent hers" and "Send yours to reveal it · 8:14 AM". The blur is a local placeholder; the real photo is only released by the relay after you send (section 6).
+3. **Both sent (revealed, after the 3-2-1 countdown).** Both photos clean with their captions. Top reads "Pose 37 · Revealed / You're both in. Next pose at 3AM." Actions sit in a white strip below the photos and never cover them: Our cards thumbnail, Save, Who did it better?.
+
+![Mission screen: she hasn't sent, she has sent, both sent, and the Our cards gallery](images/mission-screens.png)
+
+**Retake.** After the shutter, the photo shows as a preview with two buttons: **Retake** (back to the live camera, photo discarded) and **Send**. Retakes are unlimited before sending. After sending, a "Retake" link stays available until the partner has sent: the new photo replaces the old one on the relay and the old copy is deleted. Once both have sent (the reveal has happened) the photo is final. The timer setting, caption and pose stay the same across retakes.
+
 **Pose prompt.** Shown on the live camera view in the dark translucent pill (where the coach banner sits in the mock), for example "Pose 1: Lie flat on your back. Take a selfie from the ground." When the shutter is pressed the pill fades and the pose text becomes the default caption above the white line. The user can edit it (60 characters). The same prompt is in the daily notification.
 
 **5-second timer (hands-free). An optional tap, never automatic.** Many poses need both hands or the phone held at a distance, so the camera has a small timer button at the top-right, opposite the X. The user chooses, every time, whether to use it. It is OFF by default and normal photos are unchanged: tap the shutter, photo is taken instantly.
@@ -147,7 +157,7 @@ After the photo the timer switches itself back off, so the next photo is a norma
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
-**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is replaced by the Our cards grid on the Mission page (section 6), and the reveal countdown screen is not drawn yet. The camera now has an optional 5-second timer button (screen 2 shows it off, screen 3 shows it on and counting down).
+**Reference screens.** These mocks predate the latest decisions. Follow the text where they differ: no mood row, no streak badge, "posted within a minute" removed, "Share to Stories" becomes "Who did it better?", the Moments history screen is replaced by the Our cards gallery (section 6), reached from the thumbnail on the Mission screen, and the reveal countdown screen is not drawn yet. The camera now has an optional 5-second timer button (screen 2 shows it off, screen 3 shows it on and counting down).
 
 ![First selfie, camera, camera with 5-second timer on, reveal and share card mocks](images/mission-reference-screens.png)
 
@@ -178,15 +188,12 @@ R2 is preferred because it charges nothing for downloads.
 
 **Locking after 14 days.** From day 15 a photo shows a locked placeholder with "Upgrade to see your photos". Warn on days 10 to 13 that photos are about to lock. Users can still save any card before it locks.
 
-**Mission page (today's pose + Our cards).** Past cards live on the Mission page itself, not on a separate screen. The centre Mission tab opens one scrolling page (title "Mission", count of completed missions, Settings gear top-right):
+**Our cards (gallery).** Opened from the "Our cards" thumbnail at the bottom-left of the Mission screen (section 5). A pushed screen with a back arrow and the large title "Our cards" plus "N missions together". No tab bar.
 
-- **Today card (top).** "Today · Pose N", "Day N together", the pose text, the partner's status (for example "Emma sent hers. Send yours to reveal." with her photo blurred and locked), and the button "Take today's selfie", which opens the camera. After both have sent, this card becomes today's revealed card with Save card and Who did it better?.
-- **Our cards (below).** A 3-column grid of past reveal cards, newest first, each with a date label (Yesterday, then the date). Tap opens the full card with Save and Who did it better?, exactly like the Reveal screen. A green pill reads "Last 14 days free".
-- **Older than 14 days.** The grid continues, but each card is heavily blurred with a pink lock. A pill "Unlock with Pro" sits on the section header; tapping it or any locked card opens the paywall. Blur is applied on-device to the local photo, so the photo never leaves the phone.
-- Pro users see one continuous grid with no locked section. Days where only one partner sent show a single photo marked "Waiting for partner" or "Missed"; days where neither sent are skipped.
+- A 3-column grid of past cards, newest first. Every thumbnail is the real card: both photos stacked with the white line and the "CoupleIn · Day N" pill, exactly like the share card. Tap opens the full card with Save and Who did it better?.
+- It must feel free. No Pro badge, banner or upgrade button at the top. The only paywall sign is a thin divider, reached by scrolling: "Older than 14 days · Unlock". Below it the older cards are softly blurred (day pill still visible). Tapping Unlock or a blurred card opens the paywall. Blur is done on-device; the photo never leaves the phone.
+- Pro users see one continuous grid with no divider. Days where only one partner sent show a single photo marked "Waiting for partner" or "Missed"; days where neither sent are skipped.
 - The 14 days count back from today in the couple's shared timezone, rolling at the 3AM unlock, so a card locks on day 15.
-
-![Mission page: today's pose on top, Our cards below, last 14 days free, older cards locked behind Pro](images/mission-page.png)
 
 **Store and legal requirements**
 
@@ -259,6 +266,6 @@ R2 is preferred because it charges nothing for downloads.
 - Locked placeholders and the three-plan pricing page.
 - Store forms, privacy policy, in-app account deletion, unlink partner.
 - Optional 5-second hands-free timer on the camera: top-right button, off by default, tap to arm, tap shutter to count down, auto-capture, cancel, resets to off after each photo. Test with the front and back camera and with flash.
-- Mission page: today card on top, Our cards grid below from local storage, last 14 days open, older cards blurred on-device with a lock and a paywall tap, one continuous grid for Pro.
+- Mission screen in three states with Retake/Send preview, plus the Our cards gallery from local storage, last 14 days open, older cards blurred on-device with a lock and a paywall tap, one continuous grid for Pro.
 - Load the pose list from Final-Plan-Pose-List.xlsx (Pose 1 to 365, no dates).
 - Test with two accounts on two phones, one set to another timezone, covering: both send, one sends, partner never joins, late code entry, app closed mid-countdown, upload failure, 14-day lock.
