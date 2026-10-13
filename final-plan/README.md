@@ -1,3 +1,5 @@
+> **Moved:** the single source of truth is now https://github.com/Chubyilo92/Missionandbond. Do not edit this copy.
+
 # Final Plan (Mission MVP)
 
 - `Final-Plan-Developer.md` : the single spec for the developer (no marketing). Everything that needs building is here, with all screens: navigation and Pro paywall, daily pose rules, onboarding, the Mission camera (three states, Snapchat-style mission bar, Retake / Send, 5s timer, mood and caption), share card and Save sheet, Our cards gallery, storage and relay, notifications, and Bond (section 8).

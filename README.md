@@ -1,3 +1,5 @@
+> **Moved:** the single source of truth is now https://github.com/Chubyilo92/Missionandbond. Do not edit this copy.
+
 # CoupleinSelfieSync
 
 The single source of truth is the `final-plan/` folder:
