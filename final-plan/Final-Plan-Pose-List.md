@@ -2,7 +2,7 @@
 
 Each pose: under a minute, at home, no objects, no dates or themes. Both partners do the same pose. Every pose is free to do; only viewing photos older than 14 days is Pro.
 
-1. Lie flat on your back and take it looking up
+1. Take a picture lying down on your back
 2. Biggest smile you can manage
 3. Peace sign next to your cheek
 4. Ridiculously shocked face, hand over your mouth

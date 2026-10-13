@@ -19,7 +19,7 @@ Mission is the MVP: one pose a day, both partners send a selfie, a 3-2-1 reveal 
 **Cut from the MVP (do not build)**
 
 - Saturday global challenge or any second daily card.
-- Streaks, streak passes, missed-day tiles, mood-only posts, mood emoji on selfies.
+- Streaks, streak passes, missed-day tiles, mood-only posts (a mood without a photo).
 - "Who did it better" voting and scoreboard.
 - Cloud photo storage beyond the relay.
 
@@ -79,7 +79,7 @@ One thing a day, every day. Each couple walks a fixed list of 365 poses in order
 6. Every photo sent earns 25 points, whether or not the partner has sent.
 7. There is no second daily card and no weekly special task in the MVP.
 
-**Pose list.** The rebuilt list is Final-Plan-Pose-List.xlsx (Pose 1 to 365, no Month column). Pose 1 is "Lie flat on your back. Take a selfie from the ground." Every pose is free to do, every day, for as long as the couple wants: nothing about doing the daily pose is ever locked. Only viewing old photos is Pro (section 6). The first 7 poses feed the Week 1 video. In-app poses must be safe to do at home: no roads, roofs, edges or water.
+**Pose list.** The rebuilt list is Final-Plan-Pose-List.xlsx (Pose 1 to 365, no Month column). Pose 1 is "Take a picture lying down on your back." Every pose is free to do, every day, for as long as the couple wants: nothing about doing the daily pose is ever locked. Only viewing old photos is Pro (section 6). The first 7 poses feed the Week 1 video. In-app poses must be safe to do at home: no roads, roofs, edges or water.
 
 ## 4. Onboarding
 
@@ -135,9 +135,16 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Retake.** After the shutter, the photo shows as a preview with two buttons: **Retake** (back to the live camera, photo discarded) and **Send**. Retakes are unlimited before sending. After sending, a "Retake" link stays available until the partner has sent: the new photo replaces the old one on the relay and the old copy is deleted. Once both have sent (the reveal has happened) the photo is final. The timer setting, caption and pose stay the same across retakes.
 
+**Mood and caption (both optional).** Neither is ever required to send.
+
+- **Mood:** a row of six emoji above the shutter, labelled "How are you feeling? · optional" (😊 Happy, 🥰 Loved, 😌 Calm, 🤩 Excited, 😴 Tired, 😢 Sad). Tap to select (pink ring), tap again to clear. Can be picked before or after the shutter, up until Send.
+- **Caption:** a frosted field at the bottom of your photo, "Add a caption · optional", 60 characters with a counter. Empty by default.
+- **On the card:** the mood shows as a white sticker top-right of that person's photo ("😊 Happy"), the caption as a frosted pill bottom-left. Nothing is shown if they were skipped. Both appear on the reveal, the share card and Our cards.
+- Both stay hidden from the partner until the reveal, exactly like the photo, and travel with the photo through the relay. On a retake they are kept unless the user changes them.
+
 **Field of view (not too close).** Open the front camera at its widest setting: on iPhone use the widest available zoom factor of the front camera (the "zoomed out" view on iPhone 11 and later), on Android pick the widest front lens / minimum zoom ratio in CameraX. Never default to a cropped or zoomed view, and never crop the photo to fit the half-screen; fill the frame from the widest image. Optional: on-device face detection shows a small "Move the phone back a little" hint if a face fills more than about 60% of the frame (hint only, never blocks the shutter). For poses that need distance, the 5s timer is the answer.
 
-**Pose prompt.** Shown on the live camera view in the dark translucent pill (where the coach banner sits in the mock), for example "Pose 1: Lie flat on your back. Take a selfie from the ground." When the shutter is pressed the pill fades and the pose text becomes the default caption above the white line. The user can edit it (60 characters). The same prompt is in the daily notification.
+**Pose prompt.** Written across the top of the live camera under "Today's mission", for example "Take a picture lying down on your back." The pose stays at the top of the camera and is not copied into the caption (the caption is the user's own, optional). The same prompt is in the daily notification.
 
 **5-second timer (hands-free). An optional tap, never automatic.** Many poses need both hands or the phone held at a distance, so the camera has a small timer button at the top-right, opposite the X. The user chooses, every time, whether to use it. It is OFF by default and normal photos are unchanged: tap the shutter, photo is taken instantly.
 
@@ -155,7 +162,7 @@ After the photo the timer switches itself back off, so the next photo is a norma
 
 **Reveal screen.** Both photos on one card, "Day 256 together", "Pose N", "You're both in." Two buttons: **Save card** (download to the phone) and **Who did it better?** (opens the share sheet with the card).
 
-**Share card.** 1080 x 1920 (9:16) PNG. Your selfie on top, partner's below, an 18px white line between. A white pill on the line reads "Day N together" with the pose number. Caption pills on each photo, "coupleinapp.com" watermark bottom-right (removed for Pro). Built on the phone when Save or Share is tapped, never stored.
+**Share card.** 1080 x 1920 (9:16) PNG. Your selfie on top, partner's below, an 18px white line between. A white pill on the line reads "CoupleIn · Day N". On each photo: the caption pill bottom-left and the mood sticker top-right, only if they were added; "coupleinapp.com" watermark bottom-right (removed for Pro). Built on the phone when Save or Share is tapped, never stored.
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
@@ -241,7 +248,7 @@ R2 is preferred because it charges nothing for downloads.
 
 - Couple: couple_id, user_1_id, user_2_id (empty until the partner joins), relationship_start_date, pose_number, pending_invite_token, shared_timezone, last_pose_reset, plan.
 - User: user_id, display_name, gender (optional), auth_provider, partner_id, timezone, notification_enabled.
-- Send record: couple_id, pose_number, sent_by, sent_at, unlocked, relay_path (cleared once both phones have downloaded).
+- Send record: couple_id, pose_number, sent_by, sent_at, mood (optional), caption (optional), unlocked, relay_path (cleared once both phones have downloaded).
 
 **Analytics (PostHog):** first_selfie_sent, partner_invited, partner_joined, reveal_viewed, card_saved, who_did_it_better_tapped, week1_video_ready, paywall_viewed, plan_started.
 
