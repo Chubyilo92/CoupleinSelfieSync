@@ -53,14 +53,14 @@ Redesign the pricing page to show all three plans, with Yearly highlighted. **Op
 
 1. **Your relationship, in one place.** Memories, plans, gestures and hard talks. One app, just for you two.
 2. **Every memory, forever.** Every card you have ever made, unlocked. Nothing ever locks again.
-3. **Post-ready cards.** No watermark. Post your cards clean.
+3. **Post-ready cards.** No CoupleIn watermark. Your cards just say “N Days of Us”.
 4. **We are a priority.** Date nights and reminders you both see. Nothing gets forgotten. (Calendar)
 5. **Speak their language.** Know exactly what makes them feel loved, then do it. (Brownies)
 6. **Calm, not chaos.** Resolve: take turns, feel heard, end the loop. Backed by psychology.
 
 Plans side by side: Weekly £5.99, **Yearly £49.99** (pre-selected, tag "BEST VALUE · SAVE 84%", "£0.96 / week"), Monthly £9.99. Button "Unlock Pro for both of us". Small print "Less than a coffee a week · Cancel anytime · Restore purchase". Rules: no unverified statistics on this screen (add real reviews and couple counts once they exist); the Week 1 video is not part of the offer for now; "2 for the price of 1" and "for both of us" depend on Pro being per couple (open item 2).
 
-![Save sheet (watermark switch, Pro) and the Pro paywall](images/save-and-paywall.png)
+![Save sheet (CoupleIn watermark switch, Pro) and the Pro paywall](images/save-and-paywall.png)
 
 **Gender at sign-up.** Asked on the name step, only to choose which placeholder is shown on the locked tabs. Options: Woman, Man, Prefer not to say (neutral version, shows either). The field is optional.
 
@@ -142,7 +142,7 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 1. **Partner has not sent.** Partner half is a soft pink-to-peach gradient (never black) with the partner's profile photo in a gradient ring, "Emma hasn't sent hers yet", "Go first. She can't see yours until she sends hers." and a white "Nudge Emma" button (sends a push; limit one nudge per 3 hours).
 2. **Partner has sent.** Partner half shows her photo heavily blurred with a frosted lock: "Emma sent hers" and "Send yours to reveal it · 8:14 AM". The blur is a local placeholder; the real photo is only released by the relay after you send (section 6).
-3. **Both sent (revealed, after the 3-2-1 countdown).** Both photos clean with their captions. Top reads "Mission complete / You're both in. Next pose at 3AM." Actions sit in a white strip below the photos and never cover them: Our cards icon, Save, Who did it better?.
+3. **Both sent (revealed, after the 3-2-1 countdown).** Both photos clean with their caption + mood pills. Top reads "Mission complete / You're both in. Next pose at 3AM." Actions sit in a white strip below the photos and never cover them: Our cards icon, Save, Who did it better?.
 
 ![Mission screen: she hasn't sent, she has sent with the timer on, after the shot (mission gone, Retake / Send), both sent, and Our cards](images/mission-screens.png)
 
@@ -175,22 +175,32 @@ After the photo the timer switches itself back off, so the next photo is a norma
 
 **Camera permission denied.** Explain why and link to Settings. A gallery fallback is allowed only in this case, with a warning.
 
-**Countdown before every reveal.** Full-screen, dark or blurred background, both photos hidden behind a combined card. The word "Reveal" then "3... 2... 1...", one second per number (3 seconds total). No skip. It runs from local state with no network dependency. The combined card is rendered and cached before the countdown starts so the reveal has no spinner. If the app is closed mid-countdown, reopening lands on the reveal. If the user taps the push hours later, the countdown still plays. The countdown never shows the phrase "Who did it better?".
+**Reveal countdown (animated).** Plays as soon as both partners have sent (or when the "[Partner] just sent theirs" push is tapped). Full screen: no tab bar, no header text, no action buttons, only the X. Both photos sit in place but heavily blurred (about 34px), with the white line between them. Centred over the line: "REVEAL" in spaced capitals, a frosted-glass circle with the number, and "You both sent yours" underneath.
 
-**Reveal screen.** Both photos on one card, "Day 256 together", "Pose N", "You're both in." Two buttons: **Save card** (download to the phone) and **Who did it better?** (opens the share sheet with the card).
+1. **3, 2, 1.** One second per number. Each number pops in at 125% and settles to 100% in about 250ms, with a light haptic on each.
+2. **Reveal.** After 1 the circle fades, both photos unblur over about 0.8s, and a burst of small pink hearts flies out from the Day pill on the line.
+3. **Revealed.** The caption and mood pills, the header "Mission complete / You're both in. Next pose at 3AM." and the white action strip (Our cards, Save, Who did it better?) slide in.
+
+No skip. It runs from local state with no network dependency: both photos are already on the phone and the combined card is cached before the countdown starts, so there is no spinner. If the app is closed mid-countdown, reopening lands on the revealed screen. If the user taps the push hours later, the countdown still plays. "Who did it better?" never appears during the countdown.
+
+![Reveal countdown: 3, 2, 1, unblur with hearts, revealed](images/reveal-countdown.png)
+
+![Reveal animation (loop)](images/reveal-animation.gif)
+
+**Reveal screen.** Both photos clean, each with its caption + mood pill ("😊 Happy · Finally home. Pizza night?"), the Day pill on the line, the header "Mission complete / You're both in. Next pose at 3AM.", and the white action strip under the photos (it never covers them): Our cards, **Save** (opens the Save sheet) and **Who did it better?** (opens the Save sheet, then the share sheet).
 
 **Share card.** 1080 x 1920 (9:16) PNG, built on the phone when Save or Share is tapped, never stored. Your selfie on top, partner's below, an 18px white line between. Designed for TikTok, Reels and Stories, the number one way the app spreads:
 
 - **Safe zone.** Those apps cover the top ~12%, the bottom ~22% and the right edge from ~40% to ~78% of the frame with their buttons and captions. Nothing important goes there.
-- **Day pill.** The white "♥ CoupleIn · Day N" pill sits in the centre of the white line on every card, free and Pro. The centre is never covered by any app.
-- **Watermark (free).** "♥ coupleinapp.com" in small white text just under the Day pill. Pro users can turn it off.
+- **The watermark is the pill in the middle.** The white pill in the centre of the white line is the CoupleIn watermark: free cards say "♥ CoupleIn · Day N". When a Pro user switches the watermark off, the same pill reads "♥ N Days of Us" (for example "386 Days of Us"), with no CoupleIn branding. The centre is never covered by any app.
+- **No other branding.** No coupleinapp.com text and no other logo anywhere on the card.
 - **Caption + mood.** One pill per photo, left-aligned: top photo about 15% from the top, bottom photo just above the bottom safe line. Only shown if added.
 - **No mission on the card.** The mission only appears on the live camera and is gone once the photo is taken.
 - The camera's own overlays (X, flip, timer, the mission bar) are never part of the photo or the card.
 
-![Share card, free with watermark vs Pro without, with the TikTok / Reels / Stories covered areas in pink](images/share-card-safe-zones.png)
+![Share card: free with the CoupleIn pill, Pro with "359 Days of Us", with the TikTok / Reels / Stories covered areas in pink](images/share-card-safe-zones.png)
 
-**Save sheet.** Tapping Save opens "Save your card" ("Ready for TikTok, Reels and Stories") with a live preview of the card and one switch: **Watermark** (show coupleinapp.com on the card), on by default. The switch is **Pro**: Pro users can turn it off and the preview updates instantly; free users see it on with a PRO tag, and tapping it opens the paywall. Line under the switch: "Remove the watermark with Pro." Button: "Save to Photos". The same sheet appears before sharing from Who did it better?. The app remembers each Pro user's last choice. Shown with the paywall in section 2.
+**Save sheet.** Tapping Save opens "Save your card" ("Ready for TikTok, Reels and Stories") with two previews side by side, "Watermark on" (CoupleIn · Day N) and "Off · Pro" ("N Days of Us"), and one switch: **CoupleIn watermark**, on by default, sub-line "Off: your card says 'N Days of Us'". The switch is **Pro**: Pro users can turn it off; free users see it on with a PRO tag, and tapping it or the "Off · Pro" preview opens the paywall. Button: "Save to Photos". The same sheet appears before sharing from Who did it better?. The app remembers each Pro user's last choice. Shown with the paywall in section 2.
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
@@ -249,6 +259,16 @@ R2 is preferred because it charges nothing for downloads.
 | Partner has not joined after 7 days | Reminder to the inviter |
 | Photos about to lock (days 10 to 13) | "Save your cards before they lock" |
 | 7th pair revealed | "Your Week 1 video is ready" |
+
+**Daily Mission nudges (twice a day).** Every user who has not sent today's photo gets two pushes a day, so the habit sticks:
+
+| When (local, editable in Settings) | Push |
+| --- | --- |
+| Morning, 9:00 AM (or when the pose unlocks, if later) | "Today's mission: [pose] 📸" |
+| Evening, 6:00 PM, if [Partner] has already sent | "[Partner] sent theirs. Send yours to reveal it." |
+| Evening, 6:00 PM, if neither has sent | "Your mission is still open: [pose]. It takes 10 seconds." |
+
+Both stop the moment the user sends. Never more than two Mission nudges a day per user; the "[Partner] just sent theirs" and reveal pushes are separate events. Bond's daily question push (7:00 PM) is separate and never fires within an hour of a Mission nudge.
 
 **Late-connection reconciliation.** User 2 downloads without a code, goes through Flow A and sends Pose 1 alone, then later enters a valid code on the waiting screen:
 
@@ -391,3 +411,6 @@ The daily question can come from any category; "Ask another" serves from the cho
 - Share card export with the social safe zone, the Day pill and the watermark; Save sheet with the single Watermark switch (Pro).
 - Pro paywall with the 2-for-1 banner and the six-line value stack.
 - Bond (section 8): Today, Answer sheet, Reveal, Ask another, question bank, notifications.
+- Animated reveal: blurred photos, "REVEAL" 3-2-1 with pop and haptics, unblur with heart burst, then the revealed screen.
+- Two daily Mission nudges (9 AM and 6 PM local, editable), stopped as soon as the user sends.
+- Watermark = the centre pill: "CoupleIn · Day N" (free) or "N Days of Us" (Pro, watermark off).
