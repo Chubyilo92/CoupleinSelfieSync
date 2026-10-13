@@ -49,6 +49,19 @@ Mission replaces Mood Sync as the centre of the app and is a free feature (with 
 
 Redesign the pricing page to show all three plans, with Yearly highlighted. **Open:** whether Pro is per person or per couple (recommended: per couple).
 
+**Pro paywall.** Built as an offer so good that not buying feels silly. Header pill "COUPLEIN PRO", title "Love them better. Every single day.", subtitle "Everything unlocked, for both of you." Then the value stack, each with an icon, a bold line and one sentence:
+
+1. **Every memory, forever.** Every card you have ever made, unlocked. Nothing ever locks again.
+2. **Post-ready cards.** Remove the watermark and the mission. Your card, your way.
+3. **We are a priority.** Date nights and reminders you both see. Nothing gets forgotten. (Calendar)
+4. **Speak their language.** Know exactly what makes them feel loved, then do it. (Brownies)
+5. **Calm, not chaos.** Resolve: take turns, feel heard, end the loop. Backed by psychology.
+6. **Two for the price of one.** One plan unlocks Pro for you and your partner.
+
+Plans side by side: Weekly £5.99, **Yearly £49.99** (pre-selected, tag "BEST VALUE · SAVE 84%", "£0.96 / week"), Monthly £9.99. Button "Unlock Pro for both of us". Small print "Less than a coffee a week · Cancel anytime · Restore purchase". Rules: no unverified statistics on this screen (add real reviews and couple counts once they exist); the Week 1 video is not part of the offer for now; "Two for the price of one" and "for both of us" depend on Pro being per couple (open item 2).
+
+![Save sheet (free vs clean) and the Pro paywall](images/save-and-paywall.png)
+
 **Gender at sign-up.** Asked on the name step, only to choose which placeholder is shown on the locked tabs. Options: Woman, Man, Prefer not to say (neutral version, shows either). The field is optional.
 
 **Locked placeholders.** Each locked tab shows one demonstration page in the app's existing style, with a lock badge on the tab and a button "Upgrade to unlock [tab]". Left image is the women's version, right is the men's version.
@@ -125,34 +138,34 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Camera screen.** Full screen, tab bar hidden, X at top-left (only after the first selfie is sent), front camera, saved photo not mirrored. Layout follows the "First selfie" mock below: the photo fills the top half, the white line carries a "Day N together" pill, the partner's panel (locked, or invite) sits below.
 
-**Mission screen: three states.** The centre Mission tab opens straight into this full-screen camera. No tab bar, no header bar: the camera runs edge to edge. Your live camera fills the top half, the partner's half fills the bottom, the white line between them carries the "CoupleIn · Day N" pill. Top-left X (back to the app), top-right 5s timer, today's mission written across the top ("Today's mission" + the pose, for example "Take a picture lying down on your back."). Bottom row in every camera state: "Our cards" button (bottom-left: a clean stacked-cards icon in a round button with the label "Our cards", same style as Flip; opens the gallery), shutter (centre), flip camera (right).
+**Mission screen: three states.** The centre Mission tab opens straight into this full-screen camera. No tab bar, no header bar: the camera runs edge to edge. Your live camera fills the top half, the partner's half fills the bottom, the white line between them carries the "CoupleIn · Day N" pill. Top-left X (back to the app), top-right flip camera (becomes Retake after the shot), today's mission written across the top ("Today's mission" + the pose, for example "Take a picture lying down on your back."). Bottom row in every camera state: "Our cards" button (bottom-left: a clean stacked-cards icon in a round button with the label "Our cards", same style as Flip; opens the gallery), shutter (centre), 5s timer (bottom-right, labelled "Timer").
 
 1. **Partner has not sent.** Partner half is a soft pink-to-peach gradient (never black) with the partner's profile photo in a gradient ring, "Emma hasn't sent hers yet", "Go first. She can't see yours until she sends hers." and a white "Nudge Emma" button (sends a push; limit one nudge per 3 hours).
 2. **Partner has sent.** Partner half shows her photo heavily blurred with a frosted lock: "Emma sent hers" and "Send yours to reveal it · 8:14 AM". The blur is a local placeholder; the real photo is only released by the relay after you send (section 6).
 3. **Both sent (revealed, after the 3-2-1 countdown).** Both photos clean with their captions. Top reads "Mission complete / You're both in. Next pose at 3AM." Actions sit in a white strip below the photos and never cover them: Our cards icon, Save, Who did it better?.
 
-![Mission screen: she hasn't sent, she has sent, both sent, and the Our cards gallery](images/mission-screens.png)
+![Mission screen: she hasn't sent, she has sent with the timer on, after the shot (Retake / Send), both sent, and Our cards](images/mission-screens.png)
 
-**Retake.** After the shutter, the photo shows as a preview with two buttons: **Retake** (back to the live camera, photo discarded) and **Send**. Retakes are unlimited before sending. After sending, a "Retake" link stays available until the partner has sent: the new photo replaces the old one on the relay and the old copy is deleted. Once both have sent (the reveal has happened) the photo is final. The timer setting, caption and pose stay the same across retakes.
+**Retake.** After the shutter, the camera freezes on the photo and the controls change: the flip button at the top-right becomes a white **Retake** button, and the shutter becomes a pink **Send** button (arrow). Retake goes back to the live camera and discards the photo; retakes are unlimited before sending. After sending, a "Retake" link stays available until the partner has sent: the new photo replaces the old one on the relay and the old copy is deleted. Once both have sent (the reveal has happened) the photo is final. The timer setting, caption, mood and pose stay the same across retakes.
 
 **Mood and caption (both optional).** Neither is ever required to send.
 
 - **Mood:** a row of six emoji above the shutter, labelled "How are you feeling? · optional" (😊 Happy, 🥰 Loved, 😌 Calm, 🤩 Excited, 😴 Tired, 😢 Sad). Tap to select (pink ring), tap again to clear. Can be picked before or after the shutter, up until Send.
 - **Caption:** a frosted field at the bottom of your photo, "Add a caption · optional", 60 characters with a counter. Empty by default.
-- **On the card:** the mood shows as a white sticker top-right of that person's photo ("😊 Happy"), the caption as a frosted pill bottom-left. Nothing is shown if they were skipped. Both appear on the reveal, the share card and Our cards.
+- **On the card:** the mood and caption show together as one pill on that person's photo ("😊 Happy · Finally home. Pizza night?"), placed inside the social safe zone (see Share card). Nothing is shown if they were skipped. Both appear on the reveal, the share card and Our cards.
 - Both stay hidden from the partner until the reveal, exactly like the photo, and travel with the photo through the relay. On a retake they are kept unless the user changes them.
 
 **Field of view (not too close).** Open the front camera at its widest setting: on iPhone use the widest available zoom factor of the front camera (the "zoomed out" view on iPhone 11 and later), on Android pick the widest front lens / minimum zoom ratio in CameraX. Never default to a cropped or zoomed view, and never crop the photo to fit the half-screen; fill the frame from the widest image. Optional: on-device face detection shows a small "Move the phone back a little" hint if a face fills more than about 60% of the frame (hint only, never blocks the shutter). For poses that need distance, the 5s timer is the answer.
 
 **Pose prompt.** Written across the top of the live camera under "Today's mission", for example "Take a picture lying down on your back." The pose stays at the top of the camera and is not copied into the caption (the caption is the user's own, optional). The same prompt is in the daily notification.
 
-**5-second timer (hands-free). An optional tap, never automatic.** Many poses need both hands or the phone held at a distance, so the camera has a small timer button at the top-right, opposite the X. The user chooses, every time, whether to use it. It is OFF by default and normal photos are unchanged: tap the shutter, photo is taken instantly.
+**5-second timer (hands-free). An optional tap, never automatic.** Many poses need both hands or the phone held at a distance, so the camera has a round "5s" timer button at the bottom-right, opposite Our cards, easy to reach with the thumb. The user chooses, every time, whether to use it. It is OFF by default and normal photos are unchanged: tap the shutter, photo is taken instantly.
 
-How it works, using the timer button at the top-right of the Mission screen:
+How it works, using the timer button at the bottom-right of the Mission screen:
 
-1. **Timer off (default).** The button is grey with a stopwatch icon and the label "Timer: off". The shutter takes the photo immediately.
-2. **User taps the timer button to turn it on.** The button turns white with a pink stopwatch and the label changes to "Timer: 5s". A pill appears: "Timer on. Tap the shutter to start 5s". Nothing starts yet. Tapping the button again turns it back off.
-3. **User taps the shutter.** A large 5, 4, 3, 2, 1 counts down over the camera, with a light tick or haptic each second and the pill "Photo in 3... tap to cancel". The shutter shows a white stop square. Tapping the shutter or the timer button cancels and returns to step 2. At zero the photo is taken automatically.
+1. **Timer off (default).** The bottom-right button is white with a stopwatch and "5s", labelled "Timer". The shutter takes the photo immediately.
+2. **User taps the timer button to turn it on.** It turns pink, the label becomes "Timer on", and a hint appears above the shutter: "Timer on · prop your phone, tap the shutter". Nothing starts yet. Tap the button again to turn it off.
+3. **User taps the shutter.** A large 5, 4, 3, 2, 1 counts down over the camera with a light tick or haptic each second; the hint reads "Photo in 3… tap to cancel". Tapping the shutter or the timer button cancels. At zero the photo is taken automatically and the Retake / Send preview shows.
 
 After the photo the timer switches itself back off, so the next photo is a normal tap unless the user chooses the timer again. The rest of the flow is identical to a normal selfie (caption, send, lock). Optional: when a pose needs distance or both hands, show "Needs both hands? Try the 5s timer" under the pose prompt, which only points at the button and never turns it on. This is separate from the 3-second "Reveal 3, 2, 1" countdown, which only plays before the reveal.
 
@@ -162,7 +175,18 @@ After the photo the timer switches itself back off, so the next photo is a norma
 
 **Reveal screen.** Both photos on one card, "Day 256 together", "Pose N", "You're both in." Two buttons: **Save card** (download to the phone) and **Who did it better?** (opens the share sheet with the card).
 
-**Share card.** 1080 x 1920 (9:16) PNG. Your selfie on top, partner's below, an 18px white line between. A white pill on the line reads "CoupleIn · Day N". On each photo: the caption pill bottom-left and the mood sticker top-right, only if they were added; "coupleinapp.com" watermark bottom-right (removed for Pro). Built on the phone when Save or Share is tapped, never stored.
+**Share card.** 1080 x 1920 (9:16) PNG, built on the phone when Save or Share is tapped, never stored. Your selfie on top, partner's below, an 18px white line between. Designed for TikTok, Reels and Stories, the number one way the app spreads:
+
+- **Safe zone.** Those apps cover the top ~12%, the bottom ~22% and the right edge from ~40% to ~78% of the frame with their buttons and captions. Nothing important goes there.
+- **Mission badge (free).** A white rounded badge centred on the white line: "♥ CoupleIn · Day N · MISSION" on the first row, the mission in bold below ("Take a picture lying down on your back"). The centre of the frame is never covered by any app, and the mission is the hook that makes viewers want to try it. Because it sits across the line it only touches the chin of the top photo and the hair of the bottom one, never the faces. Use on-device face detection: if the badge would cover a face, shrink it to one line.
+- **Watermark (free).** "♥ coupleinapp.com" in small white text just under the badge.
+- **Caption + mood.** One pill per photo, left-aligned: top photo about 15% from the top, bottom photo just above the bottom safe line. Only shown if added.
+- **Clean (Pro).** Mission badge and watermark removed (either or both); the plain "CoupleIn · Day N" pill stays on the line.
+- The camera's own overlays (X, flip, timer, the mission text at the top of the camera) are never part of the photo or the card. The badge is drawn fresh when the card is exported.
+
+![Share card, free vs Pro, with the TikTok / Reels / Stories covered areas in pink](images/share-card-safe-zones.png)
+
+**Save sheet.** Tapping Save opens "Save your card" with two previews: **Keep as it is** (mission + watermark, free, selected by default) and **Clean** (no mission, no watermark, PRO badge). Below them two switches, "Show mission" and "Show watermark": Pro users can turn either or both off; free users see them on and locked with a PRO tag, and tapping Clean or a locked switch opens the paywall. Button: "Save to Photos". The same choice appears before sharing from Who did it better?. Shown with the paywall in section 2.
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
@@ -271,7 +295,7 @@ R2 is preferred because it charges nothing for downloads.
 - On-device card and video generation. Front camera not mirrored. Test on several Android phones.
 - Locked placeholders and the three-plan pricing page.
 - Store forms, privacy policy, in-app account deletion, unlink partner.
-- Optional 5-second hands-free timer on the camera: top-right button, off by default, tap to arm, tap shutter to count down, auto-capture, cancel, resets to off after each photo. Test with the front and back camera and with flash.
+- Optional 5-second hands-free timer on the camera: bottom-right button, off by default, tap to arm, tap shutter to count down, auto-capture, cancel, resets to off after each photo. Test with the front and back camera and with flash.
 - Mission screen in three states with Retake/Send preview, plus the Our cards gallery from local storage, last 14 days open, older cards blurred on-device with a lock and a paywall tap, one continuous grid for Pro.
 - Load the pose list from Final-Plan-Pose-List.xlsx (Pose 1 to 365, no dates).
 - Test with two accounts on two phones, one set to another timezone, covering: both send, one sends, partner never joins, late code entry, app closed mid-countdown, upload failure, 14-day lock.
