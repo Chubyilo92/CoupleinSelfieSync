@@ -14,7 +14,7 @@ Mission is the MVP: one pose a day, both partners send a selfie, a 3-2-1 reveal 
 - Save card and "Who did it better?" (opens the share sheet).
 - A Week 1 video generated on the phone after the 7th completed pair.
 - Photos stored on the phone, last 14 days viewable on Free, with a short-lived server relay to deliver photos between phones.
-- Gated placeholder pages for Calendar, Brownies and Resolve, and a redesigned pricing page.
+- Bond, the free daily-question page (section 8). Gated placeholder pages for Calendar, Brownies and Resolve, and a redesigned pricing page.
 
 **Cut from the MVP (do not build)**
 
@@ -29,7 +29,7 @@ Terms: **Relationship Day Count** is days since the start date entered by the fi
 
 Mission replaces Mood Sync as the centre of the app and is a free feature (with Bond, below), with no limit on daily use (the habit is the product). The only thing gated is viewing old photos: Free can open the last 14 days; anything older is Pro. The app opens on the camera, or on today's card if today's selfie is already sent.
 
-**Tab bar (left to right):** Calendar (Pro), Bond (free), Mission (free, centre, raised camera button), Brownies (Pro), Resolve (Pro). Settings moves out of the tab bar to a gear icon at the top right of every screen. Pro tabs keep the pink lock badge. The Mission (today's pose, camera, reveal) lives in the centre Mission button. **Bond** is a free page: a daily question, an "Ask another" tab with category chips (Fun, Go deeper, Would you rather, Our future, Memories), and a reveal where both partners' typed answers (200 characters) show together once both have answered. No chat, no history in v1. Question bank spec: see the "CoupleIn Bond: Question Bank" doc.
+**Tab bar (left to right):** Calendar (Pro), Bond (free), Mission (free, centre, raised camera button), Brownies (Pro), Resolve (Pro). Settings moves out of the tab bar to a gear icon at the top right of every screen. Pro tabs keep the pink lock badge. The Mission (today's pose, camera, reveal) lives in the centre Mission button. **Bond** is a free page: a daily question, an "Ask another" tab with category chips (Fun, Go deeper, Would you rather, Our future, Memories), and a reveal where both partners' typed answers (200 characters) show together once both have answered. No chat, no history in v1. Full Bond spec and screens in section 8. Question bank spec: see the "CoupleIn Bond: Question Bank" doc.
 
 | Area | Free | Pro |
 | --- | --- | --- |
@@ -49,18 +49,18 @@ Mission replaces Mood Sync as the centre of the app and is a free feature (with 
 
 Redesign the pricing page to show all three plans, with Yearly highlighted. **Open:** whether Pro is per person or per couple (recommended: per couple).
 
-**Pro paywall.** Built as an offer so good that not buying feels silly. Header pill "COUPLEIN PRO", title "Love them better. Every single day.", subtitle "Everything unlocked, for both of you." Then the value stack, each with an icon, a bold line and one sentence:
+**Pro paywall.** Built as an offer so good that not buying feels silly. Header pill "COUPLEIN PRO", title "Love them better. Every single day." Directly under the title, the most visible element on the page: a full-width pink banner **"2 for the price of 1 · One plan. [Partner] gets Pro too, at no extra cost."** with both partners' profile photos. Then the value stack, each with an icon, a bold line and one sentence:
 
-1. **Every memory, forever.** Every card you have ever made, unlocked. Nothing ever locks again.
-2. **Post-ready cards.** Remove the watermark and the mission. Your card, your way.
-3. **We are a priority.** Date nights and reminders you both see. Nothing gets forgotten. (Calendar)
-4. **Speak their language.** Know exactly what makes them feel loved, then do it. (Brownies)
-5. **Calm, not chaos.** Resolve: take turns, feel heard, end the loop. Backed by psychology.
-6. **Two for the price of one.** One plan unlocks Pro for you and your partner.
+1. **Your relationship, in one place.** Memories, plans, gestures and hard talks. One app, just for you two.
+2. **Every memory, forever.** Every card you have ever made, unlocked. Nothing ever locks again.
+3. **Post-ready cards.** No watermark. Post your cards clean.
+4. **We are a priority.** Date nights and reminders you both see. Nothing gets forgotten. (Calendar)
+5. **Speak their language.** Know exactly what makes them feel loved, then do it. (Brownies)
+6. **Calm, not chaos.** Resolve: take turns, feel heard, end the loop. Backed by psychology.
 
-Plans side by side: Weekly £5.99, **Yearly £49.99** (pre-selected, tag "BEST VALUE · SAVE 84%", "£0.96 / week"), Monthly £9.99. Button "Unlock Pro for both of us". Small print "Less than a coffee a week · Cancel anytime · Restore purchase". Rules: no unverified statistics on this screen (add real reviews and couple counts once they exist); the Week 1 video is not part of the offer for now; "Two for the price of one" and "for both of us" depend on Pro being per couple (open item 2).
+Plans side by side: Weekly £5.99, **Yearly £49.99** (pre-selected, tag "BEST VALUE · SAVE 84%", "£0.96 / week"), Monthly £9.99. Button "Unlock Pro for both of us". Small print "Less than a coffee a week · Cancel anytime · Restore purchase". Rules: no unverified statistics on this screen (add real reviews and couple counts once they exist); the Week 1 video is not part of the offer for now; "2 for the price of 1" and "for both of us" depend on Pro being per couple (open item 2).
 
-![Save sheet (free vs clean) and the Pro paywall](images/save-and-paywall.png)
+![Save sheet (watermark switch, Pro) and the Pro paywall](images/save-and-paywall.png)
 
 **Gender at sign-up.** Asked on the name step, only to choose which placeholder is shown on the locked tabs. Options: Woman, Man, Prefer not to say (neutral version, shows either). The field is optional.
 
@@ -138,13 +138,13 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Camera screen.** Full screen, tab bar hidden, X at top-left (only after the first selfie is sent), front camera, saved photo not mirrored. Layout follows the "First selfie" mock below: the photo fills the top half, the white line carries a "Day N together" pill, the partner's panel (locked, or invite) sits below.
 
-**Mission screen: three states.** The centre Mission tab opens straight into this full-screen camera. No tab bar, no header bar: the camera runs edge to edge. Your live camera fills the top half, the partner's half fills the bottom, the white line between them carries the "CoupleIn · Day N" pill. Top-left X (back to the app), top-right flip camera (becomes Retake after the shot), today's mission written across the top ("Today's mission" + the pose, for example "Take a picture lying down on your back."). Bottom row in every camera state: "Our cards" button (bottom-left: a clean stacked-cards icon in a round button with the label "Our cards", same style as Flip; opens the gallery), shutter (centre), 5s timer (bottom-right, labelled "Timer").
+**Mission screen: three states.** The centre Mission tab opens straight into this full-screen camera. No tab bar, no header bar: the camera runs edge to edge. Your live camera fills the top half, the partner's half fills the bottom, the white line between them carries the "CoupleIn · Day N" pill. Top-left X (back to the app), top-right flip camera (becomes Retake after the shot), today's mission shown as a Snapchat-style caption bar across the live camera (see Mission on the camera). Bottom row in every camera state: "Our cards" button (bottom-left: a clean stacked-cards icon in a round button with the label "Our cards", same style as Flip; opens the gallery), shutter (centre), 5s timer (bottom-right, labelled "Timer").
 
 1. **Partner has not sent.** Partner half is a soft pink-to-peach gradient (never black) with the partner's profile photo in a gradient ring, "Emma hasn't sent hers yet", "Go first. She can't see yours until she sends hers." and a white "Nudge Emma" button (sends a push; limit one nudge per 3 hours).
 2. **Partner has sent.** Partner half shows her photo heavily blurred with a frosted lock: "Emma sent hers" and "Send yours to reveal it · 8:14 AM". The blur is a local placeholder; the real photo is only released by the relay after you send (section 6).
 3. **Both sent (revealed, after the 3-2-1 countdown).** Both photos clean with their captions. Top reads "Mission complete / You're both in. Next pose at 3AM." Actions sit in a white strip below the photos and never cover them: Our cards icon, Save, Who did it better?.
 
-![Mission screen: she hasn't sent, she has sent with the timer on, after the shot (Retake / Send), both sent, and Our cards](images/mission-screens.png)
+![Mission screen: she hasn't sent, she has sent with the timer on, after the shot (mission gone, Retake / Send), both sent, and Our cards](images/mission-screens.png)
 
 **Retake.** After the shutter, the camera freezes on the photo and the controls change: the flip button at the top-right becomes a white **Retake** button, and the shutter becomes a pink **Send** button (arrow). Retake goes back to the live camera and discards the photo; retakes are unlimited before sending. After sending, a "Retake" link stays available until the partner has sent: the new photo replaces the old one on the relay and the old copy is deleted. Once both have sent (the reveal has happened) the photo is final. The timer setting, caption, mood and pose stay the same across retakes.
 
@@ -157,7 +157,11 @@ The promise made before any photo is taken: neither partner can see the other's 
 
 **Field of view (not too close).** Open the front camera at its widest setting: on iPhone use the widest available zoom factor of the front camera (the "zoomed out" view on iPhone 11 and later), on Android pick the widest front lens / minimum zoom ratio in CameraX. Never default to a cropped or zoomed view, and never crop the photo to fit the half-screen; fill the frame from the widest image. Optional: on-device face detection shows a small "Move the phone back a little" hint if a face fills more than about 60% of the frame (hint only, never blocks the shutter). For poses that need distance, the 5s timer is the answer.
 
-**Pose prompt.** Written across the top of the live camera under "Today's mission", for example "Take a picture lying down on your back." The pose stays at the top of the camera and is not copied into the caption (the caption is the user's own, optional). The same prompt is in the daily notification.
+**Mission on the camera (Snapchat-style).** Today's mission is shown only while the user is taking the picture, as a Snapchat-style caption bar across the live camera: full width, black at about 50% opacity, white centred text, for example "🎯 Take a picture lying down on your back". It sits just under the X and flip buttons so it covers as little of the face as possible. The same text is in the daily notification.
+
+- It is part of the camera screen only. It is **never** in the photo, never on the card, and never on the share image.
+- It disappears the moment the shutter fires (or the 5s timer reaches zero) and stays hidden on the Retake / Send preview. Retake brings it back with the live camera.
+- Because the mission is never on the card, there is nothing to remove when saving. The only thing a user can turn off when saving is the watermark (Pro).
 
 **5-second timer (hands-free). An optional tap, never automatic.** Many poses need both hands or the phone held at a distance, so the camera has a round "5s" timer button at the bottom-right, opposite Our cards, easy to reach with the thumb. The user chooses, every time, whether to use it. It is OFF by default and normal photos are unchanged: tap the shutter, photo is taken instantly.
 
@@ -178,20 +182,15 @@ After the photo the timer switches itself back off, so the next photo is a norma
 **Share card.** 1080 x 1920 (9:16) PNG, built on the phone when Save or Share is tapped, never stored. Your selfie on top, partner's below, an 18px white line between. Designed for TikTok, Reels and Stories, the number one way the app spreads:
 
 - **Safe zone.** Those apps cover the top ~12%, the bottom ~22% and the right edge from ~40% to ~78% of the frame with their buttons and captions. Nothing important goes there.
-- **Mission badge (free).** A white rounded badge centred on the white line: "♥ CoupleIn · Day N · MISSION" on the first row, the mission in bold below ("Take a picture lying down on your back"). The centre of the frame is never covered by any app, and the mission is the hook that makes viewers want to try it. Because it sits across the line it only touches the chin of the top photo and the hair of the bottom one, never the faces. Use on-device face detection: if the badge would cover a face, shrink it to one line.
-- **Watermark (free).** "♥ coupleinapp.com" in small white text just under the badge.
+- **Day pill.** The white "♥ CoupleIn · Day N" pill sits in the centre of the white line on every card, free and Pro. The centre is never covered by any app.
+- **Watermark (free).** "♥ coupleinapp.com" in small white text just under the Day pill. Pro users can turn it off.
 - **Caption + mood.** One pill per photo, left-aligned: top photo about 15% from the top, bottom photo just above the bottom safe line. Only shown if added.
-- **Clean (Pro).** Mission and watermark are two separate Pro switches: either one or both can be removed; the plain "CoupleIn · Day N" pill stays on the line.
-- The camera's own overlays (X, flip, timer, the mission text at the top of the camera) are never part of the photo or the card. The badge is drawn fresh when the card is exported.
+- **No mission on the card.** The mission only appears on the live camera and is gone once the photo is taken.
+- The camera's own overlays (X, flip, timer, the mission bar) are never part of the photo or the card.
 
-![Share card, free vs Pro, with the TikTok / Reels / Stories covered areas in pink](images/share-card-safe-zones.png)
+![Share card, free with watermark vs Pro without, with the TikTok / Reels / Stories covered areas in pink](images/share-card-safe-zones.png)
 
-**Save sheet.** Tapping Save opens "Save your card" with a live preview of the card and two switches underneath:
-
-- **Mission** (show today's mission on the card), on by default.
-- **Watermark** (show coupleinapp.com), on by default.
-
-The two switches are **independent of each other**: Pro users can turn off the mission only, the watermark only, or both, and the preview updates instantly. **Both switches are Pro.** Free users see both on, each with a PRO tag; tapping either one opens the paywall, and the card is saved with the mission and the watermark. Small line under the switches: "Turn either one off with Pro. They work separately." Button: "Save to Photos". The same sheet appears before sharing from Who did it better?. The app remembers each Pro user's last choice for next time.
+**Save sheet.** Tapping Save opens "Save your card" ("Ready for TikTok, Reels and Stories") with a live preview of the card and one switch: **Watermark** (show coupleinapp.com on the card), on by default. The switch is **Pro**: Pro users can turn it off and the preview updates instantly; free users see it on with a PRO tag, and tapping it opens the paywall. Line under the switch: "Remove the watermark with Pro." Button: "Save to Photos". The same sheet appears before sharing from Who did it better?. The app remembers each Pro user's last choice. Shown with the paywall in section 2.
 
 **Week 1 video.** Promised on the first reveal screen. Generated on the phone from the first 7 completed pairs (photos are local), about 10 to 15 seconds: each pair cut to a beat with its pose name and "Day N together", ending on a title card with the date range. Delivered when the 7th pair is revealed, with a push: "Your Week 1 video is ready." Free gets it with the watermark and sees "Remove the watermark" as an upgrade. If a couple is slow, send a partial video on day 10 using the pairs that exist.
 
@@ -281,7 +280,91 @@ R2 is preferred because it charges nothing for downloads.
 
 **Analytics (PostHog):** first_selfie_sent, partner_invited, partner_joined, reveal_viewed, card_saved, who_did_it_better_tapped, week1_video_ready, paywall_viewed, plan_started.
 
-## 8. Open items and build checklist
+## 8. Bond (free page)
+
+Bond is the second free feature, next to Mission. Partners answer the same question in text and see each other's answers together once both have answered. There is no chat. The fun comes from good questions and quick reactions (Love, Same, Haha). The whole feature is one loop: ask, answer privately, reveal together, react.
+
+Cut from v1: chat, answer history, double-choice taps, answer matching, a Sunday game, a Spicy category.
+
+**Where it lives.** Bond is the second tab (Calendar (Pro), **Bond**, Mission, Brownies (Pro), Resolve (Pro)). The page header reads "Bond" with the subtitle "Get to know [Partner], every day" and the Settings gear at the top right.
+
+![Bond screens: Today, Answer sheet, Reveal, Ask another](images/bond-screens.png)
+
+| Screen | What it shows | Main action |
+| --- | --- | --- |
+| 1. Today | Segmented control ("Today's question" / "Ask another"). Pink-bordered card with a category chip, the question, and the partner's answer blurred and locked. Below it, an "[Partner] asked you" row for questions the partner sent. | "Answer to see [Partner]'s" |
+| 2. Answer sheet | Bottom sheet "Your answer" with the question, a text box (200 characters, live counter) and a note that the partner has answered. | "Send and see [Partner]'s" |
+| 3. Reveal | Partner's answer and yours, each with reaction chips Love, Same, Haha. A "Both answered" label. A "Want more tonight? Ask another" card at the bottom. | Tap a reaction |
+| 4. Ask another | Chips: Fun, Go deeper, Would you rather, Our future, Memories. A card with one question from the chosen chip and a refresh icon. Below it, "Sent to [Partner] today" with each question's state (Waiting, Both answered). | "Answer and ask [Partner]" |
+
+**Today.** One daily question, the same for both partners, day-agnostic. It changes at 3AM in the couple's shared timezone, the same reset as the Mission pose.
+
+**Answer sheet.** Text only, 200 characters, no empty answers. Once sent, an answer cannot be edited. Placeholder: "Write it how you'd say it to [Partner]".
+
+**Ask another.** The user picks a chip, sees a question, can tap refresh for the next unseen one in that chip, and sends it by answering it. The partner gets it in their "[Partner] asked you" row. Cap: 3 open sent questions per couple at a time (to confirm).
+
+**Rules**
+
+- **Reveal is mutual.** Neither partner sees the other's answer until they have sent their own.
+- **Answers.** Typed text only, 200 characters max, final once sent. Would-you-rather questions are worded so the answer is a typed sentence ("Would you rather we X or Y, and why?").
+- **Reactions.** Love, Same, Haha. One per answer per person, changeable. The partner sees a badge ("[Partner] loved this").
+- **Starting.** Available once the user has sent their first Mission selfie and finished onboarding. The partner does not need to be linked yet.
+- **Partner not joined.** The user can answer; the reveal stays locked until the partner joins and answers.
+- **History.** None in v1. Once both have answered and reacted, the question leaves Today.
+- **Free.** Bond is free for everyone, with no limits.
+
+**Question bank.** Questions come from a large pre-written bank on the server (MongoDB). No AI calls at runtime, so it costs nothing to run. The bank is being written in daily batches of 100 (20 per category) in the doc "CoupleIn Bond: Question Bank".
+
+| Category / chip | Style |
+| --- | --- |
+| Fun | Playful, specific, makes people laugh |
+| Go deeper | Honest but safe, never accusatory |
+| Would you rather | Phrased so the answer is typed, with a "why" |
+| Our future | Concrete shared scenes, not abstract goals |
+| Memories | Specific moments with the partner |
+
+The daily question can come from any category; "Ask another" serves from the chosen chip.
+
+- **Never repeating.** Each couple stores only the IDs of questions they have seen (about 20 to 30 KB at 5,000 questions). Serving always picks the next unseen question.
+- **Size.** 5,000 questions is about 400 to 500 KB of text. The app fetches batches of about 20 per category and caches them, so new questions need no app update.
+- **Running out.** At about 3 questions a day, 3,000 questions last about 2.7 years. After that the oldest return as "Revisit: you answered this a year ago. Has your answer changed?".
+- **Question rules.** Typed answer, gender-neutral, any relationship stage and long-distance, no sexual content, under about 18 words, no generic questions.
+- **Later (not v1).** Couples write their own questions; AI-generated questions saved to the bank.
+
+**Notifications**
+
+| Trigger | Push |
+| --- | --- |
+| New daily question (suggested 7pm local) | "Today's question is here" |
+| Partner answered, user has not | "[Partner] answered. Your turn." |
+| Both answered | "Both answered. See each other's." |
+| Partner sent an "Ask another" question | "[Partner] asked you something" |
+| Partner reacted to the user's answer | "[Partner] loved your answer" (or Same, Haha) |
+
+**Data (per couple)**
+
+- Question bank: id, text, category, active flag.
+- Seen IDs: list of question IDs already served to this couple.
+- Daily question: date, question id.
+- Answers: question id, user id, text (max 200), sent time.
+- Reactions: answer id, user id, type (love, same, haha).
+- Sent questions: question id, sender, state (waiting, both answered).
+
+**Edge cases**
+
+| Case | Behaviour |
+| --- | --- |
+| Partner never answers | User's answer stays sent, reveal stays locked, no expiry in v1 |
+| Both answer at the same moment | Both go straight to Reveal |
+| Different timezones | Daily question changes at 3AM in the shared timezone |
+| Bank exhausted for a chip | Oldest questions return as "Revisit" |
+| Offline | Answer saved on the phone and sent when back online |
+| Partner unlinked | Open questions and answers are removed with the link |
+| Empty or over 200 characters | Send button disabled |
+
+**Bond open items:** cap of 3 open "Ask another" questions; notification time (7pm suggested); what the locked reveal says when the partner has not joined (not drawn yet); whether answers are stored on the server and for how long.
+
+## 9. Open items and build checklist
 
 **To confirm with the founder before building**
 
@@ -304,3 +387,7 @@ R2 is preferred because it charges nothing for downloads.
 - Mission screen in three states with Retake/Send preview, plus the Our cards gallery from local storage, last 14 days open, older cards blurred on-device with a lock and a paywall tap, one continuous grid for Pro.
 - Load the pose list from Final-Plan-Pose-List.xlsx (Pose 1 to 365, no dates).
 - Test with two accounts on two phones, one set to another timezone, covering: both send, one sends, partner never joins, late code entry, app closed mid-countdown, upload failure, 14-day lock.
+- Mission bar on the live camera (Snapchat style), removed the moment the photo is taken; never drawn on the photo or card.
+- Share card export with the social safe zone, the Day pill and the watermark; Save sheet with the single Watermark switch (Pro).
+- Pro paywall with the 2-for-1 banner and the six-line value stack.
+- Bond (section 8): Today, Answer sheet, Reveal, Ask another, question bank, notifications.
